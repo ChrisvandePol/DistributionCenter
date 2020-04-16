@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:tns="http://localhost:8080/deliveryDoneService/" targetNamespace="http://localhost:8080/deliveryDoneService/">
+
+        <xsd:element name="newDeliveryRequest">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="deliveryContent" type="tns:deliveryPart" minOccurs="1" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+
+        <xsd:complexType name="deliveryPart">
+            <xsd:all>
+                <xsd:element name="productId" type="xsd:integer"/>
+                <xsd:element name="amount" type="xsd:integer"/>
+            </xsd:all>
+        </xsd:complexType>
+
+    </xsd:schema>
